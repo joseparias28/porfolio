@@ -1,0 +1,37 @@
+---
+import Header from './header.astro';
+import Sobre_mi from './sobre_mi.astro';
+import Aptitudes from './aptitudes.astro';
+import Formacion from './formacion.astro';
+import Idiomas from './idiomas.astro';
+import Conocimientos from './conocimientos.astro';
+import Contacto from './contacto.astro';
+import '../assets/styles/global.css';
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/portfolio/mi_imagen.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Jose Arias Pérez - Porfolio</title>
+	</head>
+	<body>
+		<Header />
+		<div id="content-line-up">
+			<Sobre_mi />
+			<Aptitudes />
+		</div>
+		<Formacion />
+		<div id="content-line-down">
+			<Idiomas />
+			<Conocimientos />
+			<Contacto />
+		</div>
+		
+		
+
+	</body>
+	<!-- <script src="../assets/js/dialog.js"></script> -->
+</html>

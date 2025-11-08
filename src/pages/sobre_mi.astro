@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import miImagen from '../assets/imgs/mi_imagen.jpg';
+---
+<section id="sobre-mi">
+    <div id="sobre-mi-box">
+        <h2>Sobre mí</h2>
+        <p>Soy un estudiante de Desarrollo de Aplicaciones Web apasionado por la tecnología y la informática. He cursado Bachillerato, lo que me ha proporcionado una formación general y una buena base educativa. Tengo alta capacidad de adaptarme a nuevos entornos y me gusta estar al corriente de los avances tecnológicos.</p>
+    </div>
+    <dialog id="sobre-mi-dialog">
+        <div class="perfil">
+        <Image class="img-perfil" src={miImagen} alt="mi-imagen" loading="eager"/>
+        <h1>Jose Arias Pérez</h1>
+        </div>
+        <h2>Sobre mí</h2>
+        <p>Soy un estudiante de Desarrollo de Aplicaciones Web apasionado por la tecnología y la informática. He cursado Bachillerato, lo que me ha proporcionado una formación general y una buena base educativa. Tengo alta capacidad de adaptarme a nuevos entornos y me gusta estar al corriente de los avances tecnológicos.</p>
+        <button id="close-sobre-mi">Cerrar</button>
+    </dialog>
+</section>
