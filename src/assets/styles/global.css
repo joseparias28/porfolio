@@ -785,10 +785,17 @@ footer {
     header nav ul {
         flex-direction: column;
         gap: var(--space-lg);
+        position: relative;
+        z-index: 110;
     }
 
     header nav ul li a {
         font-size: var(--fs-lg);
+        display: block;
+        padding: var(--space-sm) 0;
+        pointer-events: auto;
+        position: relative;
+        z-index: 110;
     }
 
     .hamburger {
@@ -879,7 +886,7 @@ footer {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 100;
+    z-index: 99;
     opacity: 0;
     transition: opacity var(--transition-base);
 }
