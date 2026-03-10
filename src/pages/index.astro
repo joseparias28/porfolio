@@ -1,37 +1,81 @@
 ---
-import Header from './header.astro';
-import Sobre_mi from './sobre_mi.astro';
-import Aptitudes from './aptitudes.astro';
-import Formacion from './formacion.astro';
-import Idiomas from './idiomas.astro';
-import Conocimientos from './conocimientos.astro';
-import Contacto from './contacto.astro';
-import '../assets/styles/global.css';
+import Header from "./header.astro";
+import Hero from "./sobre_mi.astro";
+import SobreMi from "./aptitudes.astro";
+import Experiencia from "./experiencia.astro";
+import Proyectos from "./proyectos.astro";
+import Tecnologias from "./tecnologias.astro";
+import Formacion from "./formacion.astro";
+import "../assets/styles/global.css";
 ---
 
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/png" href="/porfolio/mi_imagen.png" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Jose Arias Pérez - Porfolio</title>
+		<meta
+			name="description"
+			content="Portafolio de Jose Arias Pérez — Estudiante de Desarrollo de Aplicaciones Web. Tecnologías web modernas, proyectos y experiencia."
+		/>
+		<title>Jose Arias Pérez — Portafolio</title>
 	</head>
 	<body>
 		<Header />
-		<div id="content-line-up">
-			<Sobre_mi />
-			<Aptitudes />
-		</div>
-		<Formacion />
-		<div id="content-line-down">
-			<Idiomas />
-			<Conocimientos />
-			<Contacto />
-		</div>
-		
-		
+		<main>
+			<Hero />
+			<SobreMi />
+			<Experiencia />
+			<Proyectos />
+			<Tecnologias />
+			<Formacion />
+		</main>
+		<footer>
+			<p>&copy; 2026 Jose Arias Pérez.</p>
+		</footer>
 
+		<script>
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("is-visible");
+						}
+					});
+				},
+				{ threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+			);
+
+			document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+				observer.observe(el);
+			});
+
+			const hamburger = document.getElementById("hamburger-btn");
+			const nav = document.getElementById("main-nav");
+			const overlay = document.getElementById("nav-overlay");
+
+			function toggleNav() {
+				hamburger?.classList.toggle("active");
+				nav?.classList.toggle("nav-open");
+				overlay?.classList.toggle("active");
+				document.body.style.overflow = nav?.classList.contains(
+					"nav-open",
+				)
+					? "hidden"
+					: "";
+			}
+
+			hamburger?.addEventListener("click", toggleNav);
+			overlay?.addEventListener("click", toggleNav);
+
+			nav?.querySelectorAll("a").forEach((link) => {
+				link.addEventListener("click", () => {
+					if (nav.classList.contains("nav-open")) {
+						toggleNav();
+					}
+				});
+			});
+		</script>
 	</body>
-	<!-- <script src="../assets/js/dialog.js"></script> -->
 </html>

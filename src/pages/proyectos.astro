@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+import lligaImg from "../assets/imgs/lliga_escolar.jpg";
+import gestioImg from "../assets/imgs/gestio_restaurant.jpg";
+---
+
+<section id="proyectos" class="animate-on-scroll">
+    <div class="proyectos-content">
+        <h2 class="section-title">Proyectos</h2>
+        <div class="projects-grid">
+            <article class="project-card">
+                <div class="project-image">
+                    <Image src={lligaImg} alt="Lliga Escolar" loading="lazy" />
+                </div>
+                <div class="project-info">
+                    <h3>Lliga Escolar</h3>
+                    <p>
+                        Gestión de ligas deportivas escolares con equipos,
+                        jugadores, jornadas y clasificaciones automáticas.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">MariaDB</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">CSS</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image">
+                    <Image
+                        src={gestioImg}
+                        alt="Gestió Restaurants"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="project-info">
+                    <h3>Gestió Restaurants</h3>
+                    <p>
+                        Sistema de gestión de restaurante con panel de
+                        administración, carta pública, gestión de cocina y TPV.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Laravel</span>
+                        <span class="project-tag">Vue</span>
+                        <span class="project-tag">MariaDB</span>
+                        <span class="project-tag">SCSS</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>

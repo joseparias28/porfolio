@@ -1,26 +1,42 @@
----
-import { Image } from 'astro:assets';
-import copernic from '../assets/imgs/logocopernic.png';
-import egara from '../assets/imgs/logoegara.png';
----
-<section id="formacion">
-    <h2>Formación</h2>
-    <div class="box">
-        <a href="https://www.copernic.cat/ca" target="_blank">
-        <div id="copernic">
-            <Image class="logo" src={copernic} alt="Copernic" loading="eager"/>
-            <h3>Institut Nicolau Copèrnic</h3>
-            <h4>Desarrollo de Aplicaciones Web</h4>
-            <p>Setiembre 2024 - Actualidad</p>
+<section id="formacion" class="animate-on-scroll">
+    <div class="experiencia-content">
+        <h2 class="section-title">Formación</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <a
+                    href="https://www.copernic.cat/ca"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <div class="card">
+                        <span class="date">Septiembre 2024 — Actualidad</span>
+                        <h3>Grado Superior — Desarrollo de Aplicaciones Web</h3>
+                        <span class="company">INS Nicolau Copèrnic</span>
+                        <p>
+                            Formación en tecnologías web, bases de datos y
+                            programación. Desarrollo front-end y back-end con
+                            PHP, Java y JavaScript.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a
+                    href="https://agora.xtec.cat/iesegara/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <div class="card">
+                        <span class="date">Septiembre 2022 — Junio 2024</span>
+                        <h3>Bachillerato Científico-Tecnológico</h3>
+                        <span class="company">Institut Ègara</span>
+                        <p>
+                            Formación general con enfoque en ciencias y
+                            tecnología.
+                        </p>
+                    </div>
+                </a>
+            </div>
         </div>
-        </a>
-        <a href="https://agora.xtec.cat/iesegara/" target="_blank">
-        <div id="egara">
-            <Image class="logo" src={egara} alt="Egara" loading="eager"/>
-            <h3>Institut Ègara</h3>
-            <h4>Bachillerato Científico-Tecnológico</h4>
-            <p>Setiembre 2022 - Junio 2024</p>
-        </div>
-        </a>
     </div>
 </section>

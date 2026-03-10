@@ -1,21 +1,23 @@
 ---
-import { Image } from 'astro:assets';
-import miImagen from '../assets/imgs/mi_imagen.jpg';
+import { Image } from "astro:assets";
+import miImagen from "../assets/imgs/mi_imagen.jpg";
 ---
 
 <header>
-    <div class="perfil">
-        <Image class="img-perfil" src={miImagen} alt="mi-imagen" loading="eager"/>
-        <h1>Jose Arias Pérez</h1>
-    </div>
-	<nav>
+	<a href="#hero" class="nav-brand">Jose <span>Arias</span></a>
+	<nav id="main-nav">
 		<ul>
-			<li><a href="#sobre-mi">Sobre mi</a></li>
-			<li><a href="#aptitudes">Aptitudes</a></li>
+			<li><a href="#sobre-mi">Sobre mí</a></li>
+			<li><a href="#experiencia">Experiencia</a></li>
+			<li><a href="#proyectos">Proyectos</a></li>
+			<li><a href="#tecnologias">Tecnologías</a></li>
 			<li><a href="#formacion">Formación</a></li>
-			<li><a href="#idiomas">Idiomas</a></li>
-			<li><a href="#conocimientos">Conocimientos</a></li>
-			<li><a href="#contacto">Contacto</a></li>
 		</ul>
 	</nav>
+	<button class="hamburger" id="hamburger-btn" aria-label="Abrir menú">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
 </header>
+<div class="nav-overlay" id="nav-overlay"></div>
