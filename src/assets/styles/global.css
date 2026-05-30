@@ -462,9 +462,10 @@ header nav ul li a:hover::after {
 .timeline-item .company {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 12px;
     font-size: var(--fs-sm);
     color: var(--color-text-muted);
+    margin-top: var(--space-sm);
     margin-bottom: var(--space-md);
     font-weight: 500;
 }
