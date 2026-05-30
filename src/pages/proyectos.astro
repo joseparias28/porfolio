@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import lligaImg from "../assets/imgs/lliga_escolar.jpg";
 import gestioImg from "../assets/imgs/gestio_restaurant.jpg";
+import erasmusImg from "../assets/imgs/erasmus+.jpg";
 ---
 
 <section id="proyectos" class="animate-on-scroll">
@@ -45,6 +46,31 @@ import gestioImg from "../assets/imgs/gestio_restaurant.jpg";
                         <span class="project-tag">Laravel</span>
                         <span class="project-tag">Vue</span>
                         <span class="project-tag">MariaDB</span>
+                        <span class="project-tag">SCSS</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image">
+                    <Image
+                        src={erasmusImg}
+                        alt="Erasmus+"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="project-info">
+                    <h3>Erasmus+</h3>
+                    <p>
+                        Plataforma de administración Erasmus+ del Institut Nicolau Copèrnic.
+                        Gestiona proyectos, convocatorias y becas, permitiendo que estudiantes 
+                        se inscriban y gestionen su documentación.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Laravel</span>
+                        <span class="project-tag">Astro</span>
+                        <span class="project-tag">PostgresSQL</span>
                         <span class="project-tag">SCSS</span>
                         <span class="project-tag">JavaScript</span>
                     </div>
